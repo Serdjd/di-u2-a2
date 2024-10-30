@@ -4,8 +4,12 @@ const curie = {
   name: "Maria Skłodowska-Curie",
   profesion: {
     name: "física y química",
-    numPremios: 4,
-    premios: "Premio Nobel de Física, Premio Nobel de Química, Medalla Davy, Medalla Matteucci",
+    premios: [
+      "Premio Nobel de Física",
+      "Premio Nobel de Química",
+      "Medalla Davy",
+      "Medalla Matteucci"
+    ],
     descubrimientos: "polonio (elemento químico)"
   }
 }
@@ -14,8 +18,10 @@ const katsuko = {
   name: "Katsuko Saruhashi",
   profesion: {
     name: "geoquímica",
-    numPremios: 2,
-    premios: "Premio Miyake de geoquímica, Premio Tanaka",
+    premios: [
+      "Premio Miyake de geoquímica",
+      " Premio Tanaka"
+    ],
     descubrimientos: "un método para medir el dióxido de carbono en el agua de mar"
   }
 }
@@ -44,8 +50,8 @@ function Work({profesion}) {
         {profesion.name}
       </li>
       <li>
-        <b>Premios: {profesion.numPremios} </b>
-        ({profesion.premios})
+        <b>Premios: {profesion.premios.length} </b>
+        ({profesion.premios.join(", ")})
       </li>
       <li>
         <b>Descubrió: </b>
